@@ -1,0 +1,25 @@
+.offers {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    background: #fff;
+    padding: 20px 0;
+}
+.offer_inner{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+.offer {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.offer .offer_img img {
+    width: 60px;
+}
+.offer .offer_content h3 {
+    color: #333;
+}
+.offer .offer_content p {
+    color: gray;
+    font-size: 14px;
+}
