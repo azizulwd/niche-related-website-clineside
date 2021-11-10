@@ -13,7 +13,7 @@ Common CSS
 }
 body {
   font-family: 'Poppins', sans-serif;
-  background: #efeeee;
+  background: rgba(255, 87, 34, 0.1);
 }
 img{
   width: 100%;
