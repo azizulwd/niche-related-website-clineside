@@ -8,6 +8,7 @@ initializeAuthentication();
 
 const useFirebase = () => {
     const [user, setUser] = useState({});
+    const [authError, setAuthError] = useState('');
 
 
     const auth = getAuth();
@@ -15,24 +16,20 @@ const useFirebase = () => {
     const registerUser = (email, password) => {
         createUserWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
-            const user = userCredential.user;
+          setAuthError('');
           })
           .catch((error) => {
-            const errorCode = error.code;
-            const errorMessage = error.message;
+            setAuthError(error.message);
           });
     }
 
     const loginUser = (email, password) => {
         signInWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
-            // Signed in 
-            const user = userCredential.user;
-            // ...
+          setAuthError('');
         })
         .catch((error) => {
-            const errorCode = error.code;
-            const errorMessage = error.message;
+          setAuthError(error.message);
         });
     }
 
@@ -57,6 +54,7 @@ const useFirebase = () => {
 
     return{
         user,
+        authError,
         registerUser,
         logOut,
         loginUser

@@ -4,11 +4,12 @@ import Header from '../../Shared/Header/Header';
 import loginLogo from '../../../images/logo.png';
 import { Link } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
+import './Register.css';
 
 const Register = () => {
     const [loginData, setLoginData] = useState({});
 
-    const {registerUser} = useAuth();
+    const {user, authError, registerUser} = useAuth();
 
     const handleOnChanged = e =>{
         const field = e.target.name;
@@ -37,6 +38,8 @@ const Register = () => {
                             <img src={loginLogo} alt="" />
                             <h1>DriveUnit</h1>
                         </div>
+                        {user?.email && <span id="success">User Created Successfully</span>}
+                        {authError && <span id="error">{authError}</span>}
                         <form onSubmit={handleLoginForm}>
                             <input onChange={handleOnChanged} type="text" placeholder="Name" name="name" />
                             <input onChange={handleOnChanged} type="email" placeholder="Email" name="email" />
