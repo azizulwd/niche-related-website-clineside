@@ -4,9 +4,12 @@ import Header from '../../Shared/Header/Header';
 import './Login.css';
 import loginLogo from '../../../images/logo.png';
 import { Link } from 'react-router-dom';
+import useAuth from '../../../hooks/useAuth';
 
 const Login = () => {
     const [loginData, setLoginData] = useState({});
+
+    const {user, loginUser, authError} = useAuth();
 
     const handleOnChanged = e =>{
         const field = e.target.name;
@@ -18,6 +21,7 @@ const Login = () => {
 
     const handleLoginForm = e =>{
         e.preventDefault();
+        loginUser(loginData.email, loginData.password);
     }
 
     return (
@@ -29,6 +33,8 @@ const Login = () => {
                             <img src={loginLogo} alt="" />
                             <h1>DriveUnit</h1>
                         </div>
+                        {user?.email && <span id="login_success">Successfully Loged In</span>}
+                        {authError && <span id="login_error">{authError}</span>}
                         <form onSubmit={handleLoginForm}>
                             <input onChange={handleOnChanged} type="email" placeholder="Email" name="email" />
                             <input onChange={handleOnChanged} type="password" placeholder="Password" name="password" />
