@@ -3,13 +3,15 @@ import Footer from '../../Shared/Footer/Footer';
 import Header from '../../Shared/Header/Header';
 import './Login.css';
 import loginLogo from '../../../images/logo.png';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useHistory } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
 
 const Login = () => {
     const [loginData, setLoginData] = useState({});
-
     const {user, loginUser, authError} = useAuth();
+
+    const location = useLocation();
+    const history = useHistory();
 
     const handleOnChanged = e =>{
         const field = e.target.name;
@@ -21,7 +23,7 @@ const Login = () => {
 
     const handleLoginForm = e =>{
         e.preventDefault();
-        loginUser(loginData.email, loginData.password);
+        loginUser(loginData.email, loginData.password, location, history);
     }
 
     return (
