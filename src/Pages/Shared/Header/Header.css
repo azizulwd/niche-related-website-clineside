@@ -22,3 +22,13 @@
     color: #fff;
     border-radius: 50px;
 }
+.navigate_menu button {
+    background: orangered;
+    padding: 10px 25px;
+    color: #fff;
+    border-radius: 50px;
+    border: none;
+    font-size: 16px;
+    font-family: 'Poppins';
+    cursor: pointer;
+}
