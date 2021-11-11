@@ -3,9 +3,12 @@ import Footer from '../../Shared/Footer/Footer';
 import Header from '../../Shared/Header/Header';
 import loginLogo from '../../../images/logo.png';
 import { Link } from 'react-router-dom';
+import useAuth from '../../../hooks/useAuth';
 
 const Register = () => {
     const [loginData, setLoginData] = useState({});
+
+    const {registerUser} = useAuth();
 
     const handleOnChanged = e =>{
         const field = e.target.name;
@@ -22,6 +25,7 @@ const Register = () => {
             alert('Your password did not match');
             return
         }
+        registerUser(loginData.email, loginData.password);
     }
 
     return (
