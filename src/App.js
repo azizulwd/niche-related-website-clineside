@@ -1,10 +1,10 @@
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import './App.css';
 import AuthProvider from './context/AuthProvider/AuthProvider';
+import Dashboard from './Pages/Dashboard/Dashboard';
 import Explore from './Pages/Explore/Explore';
 import Home from './Pages/Home/Home/Home';
 import Login from './Pages/Login/Login/Login';
-import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
 import Register from './Pages/Login/Register/Register';
 
 function App() {
@@ -25,9 +25,12 @@ function App() {
             <Route path="/register">
               <Register></Register>
             </Route>
-            <PrivateRoute path="/explore">
+            <Route path="/explore">
               <Explore></Explore>
-            </PrivateRoute>
+            </Route>
+            <Route path="/dashboard">
+              <Dashboard></Dashboard>
+            </Route>
           </Switch>
         </BrowserRouter>
       </AuthProvider>

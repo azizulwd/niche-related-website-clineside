@@ -15,7 +15,10 @@ const Header = () => {
                 <div className="navigate_menu">
                     <Link to="/explore">Explore</Link>
                     {
-                        user?.email ? <button onClick={logOut}>Logout</button>
+                        user?.email ? <div>
+                                <button onClick={logOut}>Logout</button>
+                                <Link to="/dashboard">Dashboard</Link>
+                            </div>
                         :
                         <Link to="/login">Login</Link>
                     }

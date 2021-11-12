@@ -22,7 +22,12 @@
     color: #fff;
     border-radius: 50px;
 }
-.navigate_menu button {
+.navigate_menu div{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.navigate_menu div button {
     background: orangered;
     padding: 10px 25px;
     color: #fff;
