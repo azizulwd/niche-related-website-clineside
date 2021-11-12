@@ -1,0 +1,29 @@
+.product {
+    background: #fff;
+}
+.product_info{
+    padding: 10px 15px;
+    box-shadow: 0 0 10px lightgray;
+}
+.product_info h2{
+    color: rgb(39, 38, 38);
+    margin-bottom: 10px;
+}
+.product_info h4{
+    color: orangered;
+    margin-bottom: 10px;
+}
+.product_info p{
+    color: gray;
+}
+.product_info button {
+    border: none;
+    background: orangered;
+    font-size: 16px;
+    font-family: 'Poppins';
+    color: #fff;
+    padding: 10px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
