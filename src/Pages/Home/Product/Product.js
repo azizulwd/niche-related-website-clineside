@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Product.css';
 
 const Product = (props) => {
@@ -10,7 +11,9 @@ const Product = (props) => {
                 <h2>{name}</h2>
                 <h4>${price} Million</h4>
                 <p>{description}</p>
-                <button>Purchase</button>
+                <Link to={`/purchase/${_id}`}>
+                    <button>Purchase</button>
+                </Link>
             </div>
         </div>
     );

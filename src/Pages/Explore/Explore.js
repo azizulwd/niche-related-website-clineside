@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Product from '../Home/Product/Product';
 import './Explore.css';
-import explorebg from '../../images/explore-bg.jpg';
 
 const Explore = () => {
     const [products, setProducts] = useState([]);

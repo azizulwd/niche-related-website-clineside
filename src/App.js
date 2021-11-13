@@ -7,6 +7,7 @@ import Explore from './Pages/Explore/Explore';
 import Home from './Pages/Home/Home/Home';
 import Login from './Pages/Login/Login/Login';
 import Register from './Pages/Login/Register/Register';
+import Purchase from './Pages/Purchase/Purchase';
 
 function App() {
   return (
@@ -34,6 +35,9 @@ function App() {
             </Route>
             <Route path="/addproduct">
               <AddProduct></AddProduct>
+            </Route>
+            <Route path="/purchase/:purchaseId">
+              <Purchase></Purchase>
             </Route>
           </Switch>
         </BrowserRouter>
