@@ -39,3 +39,15 @@
     margin-top: 20px;
     cursor: pointer;
 }
+
+
+/* Media query */
+@media screen and (max-width: 688px){
+    .banner_inner{
+        flex-direction: column;
+    }
+    .banner_content{
+        width: 100%;
+        text-align: center;
+    }
+}
