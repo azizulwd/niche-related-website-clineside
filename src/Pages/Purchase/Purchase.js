@@ -31,6 +31,9 @@ const Purchase = () => {
                     </div>
                 </div>
                 <div className="order_form">
+                    <div className="order_form_title">
+                        <h3>Pleare Confirm Your Order</h3>
+                    </div>
                     <ConfirmOrder></ConfirmOrder>
                 </div>
             </div>

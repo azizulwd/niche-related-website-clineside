@@ -1,0 +1,13 @@
+.confirm_order_form input {
+    border: none;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+}
+.confirm_order_form input[type="submit"] {
+    border: none;
+    background: orangered;
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 15px;
+}

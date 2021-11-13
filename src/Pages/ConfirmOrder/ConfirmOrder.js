@@ -1,6 +1,7 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
 import useAuth from '../../hooks/useAuth';
+import './ConfirmOrder.css';
 
 const ConfirmOrder = () => {
     const {user} = useAuth();
@@ -9,7 +10,7 @@ const ConfirmOrder = () => {
 
     return (
         <div>
-            <form onSubmit={handleSubmit(onSubmit)}>
+            <form className="confirm_order_form" onSubmit={handleSubmit(onSubmit)}>
                 <input defaultValue={user.name} {...register("name")} />
                 <input defaultValue={user.email} {...register("email", { required: true })} />
                 <input {...register("address")} placeholder="Address" />
