@@ -46,3 +46,17 @@
 .order_form_title h3{
     color: orangered;
 }
+
+
+/* Media query */
+@media screen and (max-width: 688px){
+    .purchase_inner{
+        flex-direction: column;
+    }
+    .purchase_product_details{
+        width: 100%;
+    }
+    .order_form {
+        width: 100%;
+    }
+}
