@@ -8,6 +8,7 @@ import Home from './Pages/Home/Home/Home';
 import Login from './Pages/Login/Login/Login';
 import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
 import Register from './Pages/Login/Register/Register';
+import Pay from './Pages/Pay/Pay';
 import Purchase from './Pages/Purchase/Purchase';
 
 function App() {
@@ -33,6 +34,9 @@ function App() {
             </Route>
             <PrivateRoute path="/dashboard">
               <Dashboard></Dashboard>
+            </PrivateRoute>
+            <PrivateRoute path="/pay">
+              <Pay></Pay>
             </PrivateRoute>
             <Route path="/addproduct">
               <AddProduct></AddProduct>

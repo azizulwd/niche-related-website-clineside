@@ -1,0 +1,27 @@
+.dashboard_inner {
+    background: #fff;
+    padding: 20px 0;
+}
+.dashboard_navbar_parent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.dashboard_logo a h1 {
+    color: orangered;
+}
+.dashboard_navbar div{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.dashboard_navbar a, button {
+    border: none;
+    background: orangered;
+    color: #fff;
+    font-size: 16px;
+    font-family: 'Poppins';
+    padding: 10px 25px;
+    border-radius: 50px;
+    cursor: pointer;
+}
