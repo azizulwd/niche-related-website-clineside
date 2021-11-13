@@ -25,3 +25,23 @@
     border-radius: 50px;
     cursor: pointer;
 }
+
+
+
+/* Media query */
+@media screen and (max-width: 688px){
+    .dashboard_navbar_parent {
+        justify-content: center;
+        flex-direction: column;
+    }
+    .dashboard_logo{
+        margin-bottom: 50px;
+    }
+    .dashboard_navbar div{
+        flex-direction: column;
+    }
+    .dashboard_navbar a, button{
+        width: 100%;
+        text-align: center;
+    }
+}
