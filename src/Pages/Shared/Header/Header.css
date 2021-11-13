@@ -37,3 +37,26 @@
     font-family: 'Poppins';
     cursor: pointer;
 }
+
+
+/* Media query */
+@media screen and (max-width: 688px){
+    .header_inner{
+        justify-content: center;
+        flex-direction: column;
+    }
+    .logo{
+        margin-bottom: 50px;
+    }
+    .navigate_menu, .navigate_menu div{
+        flex-direction: column;
+    }
+    .navigate_menu a{
+       width: 100%;
+       text-align: center;
+    }
+    .navigate_menu div button{
+        width: 100%;
+        text-align: center;
+    }
+}
