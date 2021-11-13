@@ -8,6 +8,9 @@ import offer4 from '../../../images/compare-logo.png';
 const Offer = () => {
     return (
         <div className="offers">
+            <div className="offers_title">
+                <h1>Have a look our Stategy</h1>
+            </div>
             <div className="container offer_inner">
                 <div className="offer">
                     <div className="offer_img">
