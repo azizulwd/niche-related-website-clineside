@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
+import ConfirmOrder from '../ConfirmOrder/ConfirmOrder';
 import './Purchase.css';
 
 const Purchase = () => {
@@ -30,7 +31,7 @@ const Purchase = () => {
                     </div>
                 </div>
                 <div className="order_form">
-                    <h1>Purchase product</h1>
+                    <ConfirmOrder></ConfirmOrder>
                 </div>
             </div>
         </div>
