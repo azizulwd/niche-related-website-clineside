@@ -6,6 +6,7 @@ import Dashboard from './Pages/Dashboard/Dashboard';
 import Explore from './Pages/Explore/Explore';
 import Home from './Pages/Home/Home/Home';
 import Login from './Pages/Login/Login/Login';
+import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
 import Register from './Pages/Login/Register/Register';
 import Purchase from './Pages/Purchase/Purchase';
 
@@ -36,9 +37,9 @@ function App() {
             <Route path="/addproduct">
               <AddProduct></AddProduct>
             </Route>
-            <Route path="/purchase/:purchaseId">
+            <PrivateRoute path="/purchase/:purchaseId">
               <Purchase></Purchase>
-            </Route>
+            </PrivateRoute>
           </Switch>
         </BrowserRouter>
       </AuthProvider>

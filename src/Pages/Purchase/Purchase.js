@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import ConfirmOrder from '../ConfirmOrder/ConfirmOrder';
+import Footer from '../Shared/Footer/Footer';
+import Header from '../Shared/Header/Header';
 import './Purchase.css';
 
 const Purchase = () => {
@@ -20,24 +22,28 @@ const Purchase = () => {
     }, [productsDetails]);
 
     return (
-        <div className="pruchase_products">
-            <div className="container purchase_inner">
-                <div className="purchase_product_details">
-                    <img src={singleProductDetails?.img} alt="" />
-                    <div className="purchase_product_info">
-                        <h2>{singleProductDetails?.name}</h2>
-                        <h4>${singleProductDetails?.price} Million</h4>
-                        <p>{singleProductDetails?.description}</p>
+        <>
+        <Header></Header>
+            <div className="pruchase_products">
+                <div className="container purchase_inner">
+                    <div className="purchase_product_details">
+                        <img src={singleProductDetails?.img} alt="" />
+                        <div className="purchase_product_info">
+                            <h2>{singleProductDetails?.name}</h2>
+                            <h4>${singleProductDetails?.price} Million</h4>
+                            <p>{singleProductDetails?.description}</p>
+                        </div>
                     </div>
-                </div>
-                <div className="order_form">
-                    <div className="order_form_title">
-                        <h3>Pleare Confirm Your Order</h3>
+                    <div className="order_form">
+                        <div className="order_form_title">
+                            <h3>Pleare Confirm Your Order</h3>
+                        </div>
+                        <ConfirmOrder></ConfirmOrder>
                     </div>
-                    <ConfirmOrder></ConfirmOrder>
                 </div>
             </div>
-        </div>
+            <Footer></Footer>
+        </>
     );
 };
 
