@@ -19,7 +19,7 @@ const Dashboard = () => {
                             user?.email ? <div>
                                     <Link to="/pay">Pay</Link>
                                     <Link to="/myorders">My orders</Link>
-                                    <Link to="/Review">Review</Link>
+                                    <Link to="/reviews">Review</Link>
                                     <button onClick={logOut}>Logout</button>
                                 </div>
                             :
