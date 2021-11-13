@@ -14,3 +14,12 @@
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 20px;
 }
+
+
+
+/* Media query */
+@media screen and (max-width: 688px){
+    .explore_products_inner{
+        grid-template-columns: repeat(1, 1fr);
+    } 
+}
